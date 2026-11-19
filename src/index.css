@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Exact Peach & Botanical Green Palette sampled from presentation */
+  --color-cream-50: #faf2e3;
+  --color-cream-100: #f3ead3;
+  --color-cream-200: #e4d4b7;
+  --color-sage-50: #edf3ef;
+  --color-sage-100: #c4d6cb;
+  --color-sage-200: #b5cabd;
+  --color-sage-300: #93af9e;
+  --color-pine-500: #69897e;
+  --color-pine-600: #16514d;
+  --color-pine-700: #0f4c45;
+  --color-pine-800: #0a3833;
+  --color-pine-900: #0e221f;
+  --color-pine-950: #081412;
+  --color-ochre-400: #f0b78e;
+  --color-ochre-500: #d98254;
+  --color-ochre-600: #b3592d;
+}
+
+@layer base {
+  body {
+    background-color: #c4d6cb;
+    color: #0f2622;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .dark body {
+    background-color: #081412;
+    color: #f6efe2;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

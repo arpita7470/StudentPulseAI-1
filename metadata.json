@@ -1,0 +1,6 @@
+{
+  "name": "FitMate AI",
+  "description": "AI-powered adaptive fitness and wellness companion built with a Python validation/recommendation/SQLite backend, Gemini AI integration, and React UI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
